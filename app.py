@@ -15,12 +15,10 @@ def home():
 @app.route("/search", methods=["POST"])
 def search():
     search_text = request.form["q"]
-    tmp_text = usertweets.search_tweets(search_text)
-    #print(tmp_text)
-    resp = make_response(tmp_text)
+    resp = make_response(usertweets.search_tweets(search_text))
     resp.status_code = 200
     resp.headers["Access-Control-ALlow-Origin"] = "*"    
     return resp
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', debug=True)
