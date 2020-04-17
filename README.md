@@ -25,3 +25,4 @@ Then to run that image and attach to it at the same time:
 ```
 python app.py
 ```
+Go to your web browser: http://localhost:5000/
