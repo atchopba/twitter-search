@@ -1,28 +1,41 @@
 ## Overview
 
 Allows you to search on Twitter. The search returns 100 "last" tweets max.
+You can easily search tweets, including the text you are looking for.
 
+## Benefits 
+
+* Make it easier to something on Twitter.
+
+* Provide an interface.
 
 ## Getting Started
+
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
 - Rename the config-template.py file to config.py
 - Put the right parameters in the config.py file
 
 ### Prerequisites
 
-* Python 3.7.7 or higher
+* Windows 7+ or Linux kernel version 3.10 or higher
+* 2.00 GB of RAM
+* 3.00 GB of available disk space
+
+Use with Docker http://www.docker.io
 
 ### Installation
 
-Install packages
+To build an image with docker is pretty simple:
 ```
-pip install -r requirements.txt
+docker build -t search-tweets .
 ```
 
-### Using the tool
+## Running the tests
 
 Then to run that image and attach to it at the same time:
 ```
-python app.py
+docker run -p 5000:5000 search-tweets
 ```
+
 Go to your web browser: http://localhost:5000/
