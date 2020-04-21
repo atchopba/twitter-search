@@ -34,7 +34,7 @@ def search_tweets(q):
     "")
     #
     i = 1
-    for t in api.search(q, count=500):
+    for t in api.search(q, count=100):
         return_html += (""
             "<tr>"
                 "<td>"+ str(i) +"</td>"
