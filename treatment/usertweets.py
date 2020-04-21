@@ -39,7 +39,7 @@ def search_tweets(q):
             "<tr>"
                 "<td>"+ str(i) +"</td>"
                 "<td>"+ t._json["id_str"] +"</td>"
-                "<td>"+ t._json["user"]["name"] +" </td>"
+                "<td><a href='http://www.twitter.com/"+ t._json["user"]["screen_name"] +"' target='_blank'>"+ t._json["user"]["name"] +"</a> </td>"
                 "<td>"+ t._json["text"] +"</td>"
                 "<td>"+ t._json["user"]["location"] +"</td>"
                 "<td>"+ t._json["created_at"] +"</td>"
