@@ -34,8 +34,6 @@ $(document).ready(function(){
         		$("#boxloading").css("display", "none");
     			$("#boxresult").css("display", "block");
     			$(".tbody_result").html(_html);
-    			//console.log(_html);
-    			//$("#boxresult").html(data);
     		},
     		error: function(result, status, error) {
         		$("#boxloading").css("display", "none");
