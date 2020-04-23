@@ -50,8 +50,21 @@
         <input type="button" id="btnsearch" name="btnsearch" value="Rechercher" />
     </div>
 
-    <div id="boxresult" class="class-result">
-
+    <div id="boxloading" style="display:none;">Recherche en cours...</div>
+    <div id="boxresult" class="class-result" style="display:none;">
+        <br/><h3>Résultats</h3>
+        <table id="tbl_result" border='1'>
+            <tr>
+                <td></td>
+                <td>id str</td>
+                <td>username</td>
+                <td>text</td>
+                <td>location</td>
+                <td>created at</td>
+                <td>nb retweet</td>
+            </tr>
+            <tbody class="tbody_result"></tbody>
+        </table>    
     </div>
  
   </body>
