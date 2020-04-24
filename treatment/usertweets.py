@@ -36,6 +36,4 @@ def search_tweets(q):
                   str(t._json["retweet_count"])
               ))
         i += 1
-    #if (i == 1):
-    #    return_dict.append("No result !")
     return json.dumps(return_dict)
