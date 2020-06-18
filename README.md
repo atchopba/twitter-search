@@ -13,8 +13,8 @@ You can easily search tweets, including the text you are looking for.
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-- Rename the config-template.py file to config.py
-- Put the right parameters in the config.py file
+- Rename the init.env file to .env
+- Put the right parameters in the .env file
 
 ### Prerequisites
 
