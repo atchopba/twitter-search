@@ -9,18 +9,22 @@
 # __email__ = "Albin TCHOPBA <atchopba @ gmail dot com"
 # __status__ = "Production"
 
-
 import tweepy
-import config
 from collections import namedtuple
 import json
+
+from os import environ, path
+from dotenv import load_dotenv
+
+basedir = path.abspath(path.dirname(__file__))
+load_dotenv(path.join(basedir, '.env'))
 
 Tweet = namedtuple("Tweet", "i id_str name text location created_at retweet_count")
 
 def search_tweets(q):
-    auth = tweepy.OAuthHandler(config.CONSUMER_KEY, config.CONSUMER_SECRET)
+    auth = tweepy.OAuthHandler(environ.get("CONSUMER_KEY"), environ.get("CONSUMER_SECRET"))
     auth.secure = True
-    auth.set_access_token(config.ACCESS_TOKEN, config.ACCESS_SECRET)
+    auth.set_access_token(environ.get("ACCESS_TOKEN"), environ.get("ACCESS_SECRET"))
     api = tweepy.API(auth)
     #
     i = 1
