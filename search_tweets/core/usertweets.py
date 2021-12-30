@@ -29,7 +29,7 @@ def search_tweets(q):
     #
     i = 1
     return_dict = []
-    for t in api.search(q, count=100):
+    for t in api.search_tweets(q, count=100):
         return_dict.append(
             Tweet(str(i), 
                   t._json["id_str"],
